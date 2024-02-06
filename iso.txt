@@ -8,5 +8,11 @@ station wlan0 get-networks
 station wlan0 connect {"your network"}
 timedatectl set-ntp true
 lsblk
-o (*) then enter
-n (*) then enter
+press n and enter
+press 2 and enter
+press enter
+press enter again
+press enter for the last time
+
+press w and enter
+press y and enter to confirm
