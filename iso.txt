@@ -19,14 +19,26 @@ o (*0){
 }
 n (*1){ 
   press enter
-  press enter again 
-  press enter again 
+  press enter 
+  press enter
   type +1024M and press enter
   type ef00 and press enter
 }
 # If any flip ups occur, do not panic, preform these simple steps:
-(/1){
+(/0){
   q
   gdisk /dev/sda
   # repeat from o
+}
+
+n (*2){
+press enter
+2 and enter
+press enter
+press enter
+press enter
+}
+w (*3){
+press enter
+press y and enter to confirm
 }
