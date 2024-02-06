@@ -13,12 +13,20 @@ station wlan0 get-networks
 station wlan0 connect {"your network"}
 timedatectl set-ntp true
 lsblk
-o (*0) 
-(*0) press enter
-n (*1) 
-(*1) press enter
-(*1) press enter again 
-(*1) press enter again 
-(*1) type +1024M and press enter
-(*1) type ef00 and press enter
-# If any flip ups occur, do
+gdisk /dev/sda
+o (*0){ 
+  press enter
+}
+n (*1){ 
+  press enter
+  press enter again 
+  press enter again 
+  type +1024M and press enter
+  type ef00 and press enter
+}
+# If any flip ups occur, do not panic, preform these simple steps:
+(/1){
+  q
+  gdisk /dev/sda
+  # repeat from o
+}
