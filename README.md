@@ -1,5 +1,7 @@
 ALMOST ALL WAS DONE BY XZRVR <br>
 THE GITHUB REPO WAS MADE BY ME SO I COULD REMEMBER THE STEPS <br>
+<br>
+<br>
 First Part: <br>
 &nbsp;&nbsp;Setup Install Medium: <br>
 &nbsp;&nbsp;&nbsp;&nbsp;setup.txt <br>
