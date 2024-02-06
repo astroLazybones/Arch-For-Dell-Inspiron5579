@@ -43,11 +43,13 @@ press enter
 press y and enter to confirm
 }
 mkfs.vfat -F 32 -n EFI /dev/sda1
+
 mkfs.btrfs -f -L ROOTFS /dev/sda2
 mount -t btrfs LABEL=ROOTFS /mnt
 btrfs sub create /mnt/@
 btrfs sub create /mnt/@home
 btrfs sub create /mnt/@swap
+
 # TYPE EXACTLY WHAT HE DOES :SHOCKED:
 truncate -s 0 /mnt/@swap/swapfile
 chattr +C /mnt/@swap/swapfile
