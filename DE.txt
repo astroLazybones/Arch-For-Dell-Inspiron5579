@@ -1,0 +1,41 @@
+#ALL THIS BELONGS TO XZRVR
+systemctl enable NetworkManager
+systemctl start NetworkManager
+nmtui
+useradd -m -g users -G wheel,lp,power,audio -s /bin/bash YOURUSER
+passwd MYNEWUSERNAME
+
+Edit `nano /etc/sudoers` and uncomment (remove #) `%wheel ALL=(ALL:ALL) ALL`
+
+Now `exit` and relogin with the new YOURUSER
+sudo pacman -Syyu
+sudo pacman -S acpid dbus 
+sudo systemctl enable acpid
+
+sudo pacman -Sy xorg xfce4 xfce4-goodies xf86-input-synaptics gvfs xdg-user-dirs ttf-dejavu network-manager-applet firefox git curl wget
+
+xdg-user-dirs-update
+sudo pacman -S lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings
+sudo systemctl enable lightdm
+
+sudo pacman -Rdd pulseaudio pulseaudio-alsa pulseaudio-bluetooth pulseaudio-ctl pulseaudio-equalizer pulseaudio-jack pulseaudio-lirc pulseaudio-rtp pulseaudio-zeroconf pulseaudio-equalizer-ladspa
+sudo pacman -S pipewire pipewire-pulse gst-plugin-pipewire pipewire-alsa pipewire-media-session
+
+cd ~ && mkdir paru && git clone https://aur.archlinux.org/paru.git && cd paru && makepkg -sci && cd ~ && rm -r paru/
+
+paru -Sy plymouth
+sudo nano /etc/mkinitcpio.conf
+
+Now modify the Hooks for the Initramfs, "plymouth" must be right after "base udev" 
+```
+HOOKS=(base udev plymouth .....
+```
+Save the file then:
+
+sudo mkinitcpio -P
+sudo nano /boot/loader/entries/arch.conf
+
+Add ` quiet splash loglevel=3 rd.systemd.show_status=auto rd.udev.log_priority=3 vt.global_cursor_default=0 `
+directly after `rootflags=subvol=@` and directly before `rw` (with normal spaces in between)
+
+sudo plymouth-set-default-theme -R bgrt
