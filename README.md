@@ -9,5 +9,5 @@ Second Part: <br>
 &nbsp;&nbsp;Create Partitions/Boot Loader Configs/Other Stuff <br> 
 &nbsp;&nbsp;&nbsp;&nbsp;iso.txt <br>
 Third Part: <br>
-&nbsp;&nbsp;Installing Desktop Enviroment
+&nbsp;&nbsp;Installing Desktop Enviroment <br>
 &nbsp;&nbsp;&nbsp;&nbsp;DE.txt <br>
