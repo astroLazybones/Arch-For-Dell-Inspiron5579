@@ -67,3 +67,19 @@ mount -o noatime,compress=zstd,space_cache=v2,commit=120,subvol=@home /dev/sda2 
 mount -o noatime,space_cache=v2,commit=120,subvol=@swap /dev/sda2 /mnt/swap/
 mount /dev/sda1 /mnt/boot/
 mount -o noatime,compress=zstd,space_cache=v2,commit=120,subvolid=5 /dev/sda2 /mnt/btrfs/
+
+pacman -Syu
+
+pacstrap /mnt base base-devel linux linux-firmware btrfs-progs nano networkmanager intel-ucode
+
+genfstab -Lp /mnt >> /mnt/etc/fstab
+
+echo "/swap/swapfile none swap defaults 0 0" >> /mnt/etc/fstab
+
+
+arch-chroot /mnt
+echo YOURHOSTNAME > /etc/hostname
+echo LANG=en_NZ.UTF-8 > /etc/locale.conf
+echo LANGUAGE=en_NZ >> /etc/locale.conf
+ln -sf /usr/share/zoneinfo/Pacific/Auckland /etc/localtime
+hwclock --systohc
