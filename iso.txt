@@ -6,3 +6,7 @@ iwctl
 station wlan0 scan
 station wlan0 get-networks
 station wlan0 connect {"your network"}
+timedatectl set-ntp true
+lsblk
+o (*) then enter
+n (*) then enter
