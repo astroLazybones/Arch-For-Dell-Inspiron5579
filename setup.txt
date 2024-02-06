@@ -1,0 +1,30 @@
+You will either need:
+rufus
+balenaEtcher
+ventoy
+
+for rufus:
+KEEP DRIVE PLUGGED IN FOR WHOLE PROCESS
+add the iso into rufus
+flash to selected external drive in iso mode
+restart in advanced if windows or change boot order or something
+boot from the usb drive
+follow instuctions in iso.txt
+
+for balenaEtcher:
+KEEP DRIVE PLUGGED IN FOR WHOLE PROCESS
+add iso into balenaEtcher
+select flash drive/external drive
+flash
+restart in advanced if windows or change boot order or something
+boot from the usb drive
+follow instuctions in iso.txt
+
+for ventoy:
+setup up ventoy into external drive
+put iso inside
+restart in advanced if windows or change boot order or something
+boot from the usb drive
+select the iso
+select normal
+follow instuctions in iso.txt
