@@ -83,3 +83,10 @@ echo LANG=en_NZ.UTF-8 > /etc/locale.conf
 echo LANGUAGE=en_NZ >> /etc/locale.conf
 ln -sf /usr/share/zoneinfo/Pacific/Auckland /etc/localtime
 hwclock --systohc
+
+nano /etc/hosts
+#ADD THE CONTENTS BELLOW TO THE FILE
+127.0.0.1        localhost
+::1                localhost
+127.0.1.1        YOURHOSTNAME-g14.localdomain    YOURHOSTNAME-g14
+#OK YEAH UR DONE THERE
