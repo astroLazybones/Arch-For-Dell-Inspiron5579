@@ -21,3 +21,4 @@ n (*1)
 (*1) press enter again 
 (*1) type +1024M and press enter
 (*1) type ef00 and press enter
+# If any flip ups occur, do
