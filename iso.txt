@@ -95,9 +95,50 @@ nano /etc/hosts
 # OK YEAH UR DONE THERE
 
 nano /etc/locale.gen
-#UNCOMMENT THESE LINES (remove the #s on them) (Read the names carefully):
+# UNCOMMENT THESE LINES (remove the #s on them) (Read the names carefully):
 en_AU.UTF-8
 en_NZ.UTF.8
 en_US.UTF.8
 en_US ISO-8859-1
-#OK YEAH DONE HERE TOO
+# OK YEAH DONE HERE TOO
+
+locale-gen
+
+nano /etc/mkinitcpio.conf
+
+# scroll down then add btrfs between block and filesystems
+# like this:
+# HOOKS="base udev autodetect modconf block btrfs filesystems keyboard fsck"
+# YEP MOVING ALONG
+
+bootctl --path=/boot install
+
+nano /boot/loader/loader.conf
+# remove all contents and add this:
+default    arch.conf
+timeout    3
+editor    0
+# Yeah
+
+nano /boot/loader/entries/arch.conf
+# also remove all but add this instead:
+title    Arch Linux
+linux    /vmlinuz-linux
+initrd    /intel-ucode.img
+initrd    /initramfs-linux.img
+options      root=/dev/sda2 rootflags=subvol=@ rw
+# yep lol
+# dont confuse intel-ucode with amd-ucode like i did first time (this guide is for dell inspiron 5579, so ur using intel if ur reading this as a guide)
+
+mkinitcpio -P
+
+passwd root
+# now set ur password
+
+# then finally for the end of iso.txt:
+
+exit
+umount -R /mnt/
+reboot
+
+#if it doesnt work, just put ur issue in the issues section and ill try to solve it (you may get an error message if you try to boot and it doesnt work)
