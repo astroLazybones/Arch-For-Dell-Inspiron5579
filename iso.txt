@@ -141,4 +141,5 @@ exit
 umount -R /mnt/
 reboot
 
+# Thats all for iso.txt! :3
 #if it doesnt work, just put ur issue in the issues section and ill try to solve it (you may get an error message if you try to boot and it doesnt work)
