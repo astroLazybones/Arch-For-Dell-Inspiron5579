@@ -85,8 +85,11 @@ ln -sf /usr/share/zoneinfo/Pacific/Auckland /etc/localtime
 hwclock --systohc
 
 nano /etc/hosts
-#ADD THE CONTENTS BELLOW TO THE FILE
+# ADD THE CONTENTS BELLOW TO THE FILE (Ignore comments (things with #))
+# first space 2 tabs
+# 2nd space 3 tabs
+# 3rd space 2 tabs then one tab
 127.0.0.1        localhost
 ::1                localhost
 127.0.1.1        YOURHOSTNAME-g14.localdomain    YOURHOSTNAME-g14
-#OK YEAH UR DONE THERE
+# OK YEAH UR DONE THERE
