@@ -93,3 +93,11 @@ nano /etc/hosts
 ::1                localhost
 127.0.1.1        YOURHOSTNAME-g14.localdomain    YOURHOSTNAME-g14
 # OK YEAH UR DONE THERE
+
+nano /etc/locale.gen
+#UNCOMMENT THESE LINES (remove the #s on them) (Read the names carefully):
+en_AU.UTF-8
+en_NZ.UTF.8
+en_US.UTF.8
+en_US ISO-8859-1
+#OK YEAH DONE HERE TOO
