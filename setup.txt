@@ -1,7 +1,17 @@
-You will either need:
+you may need:
+transmission
+qbittorent
+another torrent service
+
+to make iso bootable you will need 1 of these tools:
 rufus
 balenaEtcher
 ventoy
+
+getting the a iso and making it bootable:
+go to https://archlinux.org/download/
+download the torrent
+using a torrent service, torrent the .torrent file for the ISO
 
 for rufus:
 KEEP DRIVE PLUGGED IN FOR WHOLE PROCESS
@@ -21,10 +31,11 @@ boot from the usb drive
 follow instuctions in iso.txt
 
 for ventoy:
+KEEP DRIVE PLUGGED IN FOR WHOLE PROCESS
 setup up ventoy into external drive
-put iso inside
-restart in advanced if windows or change boot order or something
+put iso inside directly inside the VENTOY partition
+restart in advanced if windows or change boot order or select boot device
 boot from the usb drive
 select the iso
-select normal
+select normal if there are mmore options
 follow instuctions in iso.txt
