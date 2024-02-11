@@ -12,3 +12,6 @@ Second Part: <br>
 Third Part: <br>
 &nbsp;&nbsp;Installing Desktop Enviroment: <br>
 &nbsp;&nbsp;&nbsp;&nbsp;DE.txt <br>
+<br>
+The output will have an environment similar to this:
+![image](https://github.com/astroLazybones/Arch-For-Dell-Inspiron5579/assets/148036040/320e4b7e-e4be-41cc-95d2-6b2c8cf45533)
