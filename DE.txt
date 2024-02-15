@@ -1,4 +1,5 @@
 #ALL THIS BELONGS TO XZRVR
+#SOME THINGS MAY BE FORGOTTEN
 systemctl enable NetworkManager
 systemctl start NetworkManager
 nmtui
