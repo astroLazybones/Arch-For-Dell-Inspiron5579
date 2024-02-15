@@ -10,6 +10,7 @@ Edit `nano /etc/sudoers` and uncomment (remove #) `%wheel ALL=(ALL:ALL) ALL`
 
 Now `exit` and relogin with the new YOURUSER
 sudo pacman -Syyu
+sudo pacman -Sy archlinux-keyring
 sudo pacman -S acpid dbus 
 sudo systemctl enable acpid
 
