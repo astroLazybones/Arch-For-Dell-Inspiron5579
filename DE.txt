@@ -40,6 +40,8 @@ sudo nano /boot/loader/entries/arch.conf
 Add ` quiet splash loglevel=3 rd.systemd.show_status=auto rd.udev.log_priority=3 vt.global_cursor_default=0 `
 
 directly after `rootflags=subvol=@` and directly before `rw` (with normal spaces in between)
+reboot?
 
 sudo plymouth-set-default-theme -R bgrt
-reboot
+
+if you didn't reboot earlier, reboot now.
