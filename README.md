@@ -1,3 +1,4 @@
+(i dont know how well i made this tbh)
 ALMOST ALL WAS DONE BY XZRVR <br>
 THE GITHUB REPO WAS MADE BY ME SO I COULD REMEMBER THE STEPS <br>
 Read knowledge.txt for info that will occasionally be updated <br>
